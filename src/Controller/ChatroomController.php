@@ -2,16 +2,19 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use function Symfony\Component\String\u;
 
-class ChatroomController {
+class ChatroomController  extends AbstractController{
 
     #[Route('/')]
     public function loginpage(): Response
     {
-        return new Response('Login');
+        return $this->render('chatroom/login.html.twig', [
+            'title' => 'Login'
+        ]);
     }
 
     #[Route('/regist')]
