@@ -1,0 +1,79 @@
+main {
+    margin-top: 15px;
+    height: 82vh;
+}
+
+.container {
+    border: solid rgb(14, 224, 177) 1px;
+    border-radius: 2rem;
+    height: 80vh;
+    background-color: rgb(40, 40, 40);
+}
+
+.row {
+    height: 100%;
+}
+
+#chat {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .btn {
+    background-color: rgb(14, 224, 177);
+}
+
+.container input {
+    border: solid rgb(14, 224, 177) 1px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+}
+
+.container input::placeholder {
+    color: rgb(167, 167, 167);
+}
+
+#userToChat {
+    border-bottom: solid rgb(14, 224, 177) 1px;
+}
+
+#textarea {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 67vh;
+}
+
+#activity {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-left: solid rgb(14, 224, 177) 1px;
+}
+
+#users {
+    margin-top: 30px;
+    overflow-y: auto;
+    max-height: 67vh;
+}
+
+#users a {
+    color: white;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: rgb(60, 60, 60);
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(110, 110, 110);
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: rgb(14, 224, 177);
+}

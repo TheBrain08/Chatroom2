@@ -1,0 +1,67 @@
+:root {
+    --base-bg-color: rgb(30, 30, 30);
+    --base-color: rgb(254, 253, 255);
+    --header-bg-color: rgb(27, 27, 27);
+    --header-color: rgb(254, 253, 255);
+    --header-hover-color: rgb(14, 224, 177);
+    --header-burger-color: rgb(14, 224, 177);
+    --primary-bg-color: rgb(255, 255, 255);
+    --primary-color: rgb(0, 0, 0);
+    --upToTop-outline-color: white;
+}
+
+html,
+body {
+    background-color: var(--base-bg-color);
+    color: var(--base-color);
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+header nav {
+    background-color: var(--header-bg-color);
+    border-bottom: 1.5px rgb(14, 224, 177) solid;
+}
+
+header nav #logo {
+    margin-left: 20px;
+}
+
+header nav .nav-item {
+    padding-right: 50px;
+}
+
+.navbar-toggler {
+    border: solid var(--header-burger-color) 1px;
+}
+
+.bi-list {
+    color: var(--header-burger-color);
+    font-size: 35px;
+}
+
+.nav-item a {
+    color: var(--header-color);
+    scroll-behavior: smooth;
+}
+
+.nav-item a:hover {
+    color: var(--header-hover-color)
+}
+
+main {
+    padding: 0px 15px 0px 15px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer #nav-3 {
+    padding: 5px 0px 2px 0px;
+    color: white;
+    border-top: 1.5px rgb(14, 224, 177) solid;
+    background-color: rgb(27, 27, 27);
+}

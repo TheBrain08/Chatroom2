@@ -9,7 +9,7 @@ use function Symfony\Component\String\u;
 
 class ChatroomController  extends AbstractController{
 
-    #[Route('/')]
+    #[Route('/', name:"app_login")]
     public function loginpage(): Response
     {
         return $this->render('chatroom/login.html.twig', [
@@ -17,11 +17,26 @@ class ChatroomController  extends AbstractController{
         ]);
     }
 
-    #[Route('/regist')]
+    #[Route('/regist', name:"app_regist")]
     public function registpage(): Response
     {
         return new Response('Regist');
     }
+
+
+    #[Route('/home', name:"app_home")]
+    public function homepage(): Response
+    {
+        return $this ->render('chatroom/home.html.twig');
+    }
+
+    #[Route('/admin', name:"app_adminpanel")]
+    public function adminpage(): Response
+    {
+        return $this ->render('chatroom/adminpanel.html.twig');
+    }
+
+
 
     #[Route('/test/{test}')]
     public function testpage(string $test = null): Response
