@@ -8,31 +8,64 @@
 
 {% block body %}
     <main>
+        <div class="modal fade" id="SearchModal" tabindex="-1" aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content popup">
+                    <div class="row  ">
+                        <div class="col-12 activity">
+                         <div class="searchbar d-flex align-items-center justify-content-between">
+                            <form class="d-flex align-items-center w-100 m-2" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn" type="submit">Search</button>
+                            </form> 
+                            <button class="btn xPopupbtn" data-bs-dismiss="modal">X</button>
+                        </div>
+
+                        <div class="users">
+                            {% for i in range(1,20) %}
+                                <a class="user d-flex align-items-center mb-4" href="#user{{i}}">
+                                    <img class="me-2" src="{{ asset('icon.png') }}" alt="" height="30px">
+                                    <h5  class="mb-0">user{{ i }}</h5>
+                                </a>
+                            {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
         <div class="row">
             <div class="col-1">
             </div>
             <div class="col-10 container">
                 <div class="row">
-                    <div id="chat" class="col-lg-9 col-md-12 d-flex flex-column">
-                        <div id="userToChat" class="text-center"><h2>Test</h2></div>
-                        <div id="textarea" class="flex-grow-1 p-2">
+                    <div class="chat col-lg-9 col-md-12 d-flex flex-column">
+                        <div class="userToChat text-center"><h2>Test</h2></div>
+                        <div class="textarea flex-grow-1 p-2">
                         {% for i in range(1,40) %}
                         User: this is a test message no. {{i}}<br>
                         {% endfor %}
                         </div>
                         <div class="sticky-bottom d-flex p-2">
                             <input type="text" class="form-control me-2" placeholder="Type a message...">
-                            <button class="btn">Sendd</button>
+                            <button class="btn">Send</button>
+
+                            <button class="searchSM d-block d-sm-block d-md-block d-lg-none" data-bs-toggle="modal" data-bs-target="#SearchModal">
+                                <i class="bi bi-search"></i>
+                            </button>
                         </div>
                     </div>
-                    <div id="activity" class="col-3 d-none d-lg-block">
-                        <div id="searchbar">
+                    <div  class="activity col-3 d-none d-lg-block">
+                        <div class="searchbar">
                             <form class="d-flex" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
+                                <button class="btn" type="submit">Search</button>
                             </form> 
                         </div>
-                        <div id="users">
+                        <div class="users">
                         {% for i in range(1,20) %}
                             <a class="user d-flex align-items-center mb-4" href="#user{{i}}">
                                 <img class="me-2" src="{{ asset('icon.png') }}" alt="" height="30px">

@@ -9,55 +9,87 @@ main {
     height: 80vh;
     background-color: rgb(40, 40, 40);
 }
+.popup {
+    border: solid rgb(14, 224, 177) 2px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 2rem;
+
+}
+.popup .activity {
+    border: none;
+}
+
+
+.xPopupbtn {
+    top: 25px;
+    right: 10px;
+    background-color: rgb(241, 31, 78);
+    color: white;
+    width: auto;
+}
+
 
 .row {
     height: 100%;
 }
 
-#chat {
+.chat {
     padding: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.container .btn {
+.btn {
     background-color: rgb(14, 224, 177);
 }
 
-.container input {
+input {
     border: solid rgb(14, 224, 177) 1px;
     background-color: rgb(70, 70, 70);
     color: white;
 }
 
-.container input::placeholder {
+input::placeholder {
     color: rgb(167, 167, 167);
 }
 
-#userToChat {
+.userToChat {
     border-bottom: solid rgb(14, 224, 177) 1px;
 }
 
-#textarea {
+.textarea {
     flex-grow: 1;
     overflow-y: auto;
     max-height: 67vh;
 }
 
-#activity {
+
+.searchSM {
+    height: 40px;
+    width: 60px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: rgb(14, 224, 177);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.activity {
     padding: 20px;
     display: flex;
     flex-direction: column;
     border-left: solid rgb(14, 224, 177) 1px;
 }
 
-#users {
+.users {
     margin-top: 30px;
     overflow-y: auto;
     max-height: 67vh;
 }
 
-#users a {
+.users a {
     color: white;
     text-decoration: none;
 }

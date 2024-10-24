@@ -9,13 +9,6 @@ use function Symfony\Component\String\u;
 
 class ChatroomController  extends AbstractController{
 
-    #[Route('/', name:"app_login")]
-    public function loginpage(): Response
-    {
-        return $this->render('chatroom/login.html.twig', [
-            'title' => 'Login'
-        ]);
-    }
 
     #[Route('/regist', name:"app_regist")]
     public function registpage(): Response
